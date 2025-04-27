@@ -40,7 +40,7 @@
             this.numberSevenButton = new System.Windows.Forms.Button();
             this.equalsButton = new System.Windows.Forms.Button();
             this.numberZeroButton = new System.Windows.Forms.Button();
-            this.SS = new System.Windows.Forms.Button();
+            this.clearButton = new System.Windows.Forms.Button();
             this.dividingButton = new System.Windows.Forms.Button();
             this.multiplicationButton = new System.Windows.Forms.Button();
             this.minusButton = new System.Windows.Forms.Button();
@@ -168,6 +168,7 @@
             this.equalsButton.TabIndex = 12;
             this.equalsButton.Text = "=";
             this.equalsButton.UseVisualStyleBackColor = false;
+            this.equalsButton.Click += new System.EventHandler(this.equalsButton_Click);
             // 
             // numberZeroButton
             // 
@@ -180,17 +181,18 @@
             this.numberZeroButton.Text = "0";
             this.numberZeroButton.UseVisualStyleBackColor = false;
             // 
-            // SS
+            // clearButton
             // 
-            this.SS.BackColor = System.Drawing.Color.Red;
-            this.SS.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.SS.ForeColor = System.Drawing.Color.White;
-            this.SS.Location = new System.Drawing.Point(12, 340);
-            this.SS.Name = "SS";
-            this.SS.Size = new System.Drawing.Size(75, 75);
-            this.SS.TabIndex = 10;
-            this.SS.Text = "C";
-            this.SS.UseVisualStyleBackColor = false;
+            this.clearButton.BackColor = System.Drawing.Color.Red;
+            this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.clearButton.ForeColor = System.Drawing.Color.White;
+            this.clearButton.Location = new System.Drawing.Point(12, 340);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(75, 75);
+            this.clearButton.TabIndex = 10;
+            this.clearButton.Text = "C";
+            this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // dividingButton
             // 
@@ -247,7 +249,7 @@
             this.Controls.Add(this.plusButton);
             this.Controls.Add(this.equalsButton);
             this.Controls.Add(this.numberZeroButton);
-            this.Controls.Add(this.SS);
+            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.numberNineButton);
             this.Controls.Add(this.numberEightButton);
             this.Controls.Add(this.numberSevenButton);
@@ -283,7 +285,7 @@
         private System.Windows.Forms.Button numberSevenButton;
         private System.Windows.Forms.Button equalsButton;
         private System.Windows.Forms.Button numberZeroButton;
-        private System.Windows.Forms.Button SS;
+        private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Button dividingButton;
         private System.Windows.Forms.Button multiplicationButton;
         private System.Windows.Forms.Button minusButton;
